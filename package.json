@@ -1,0 +1,14 @@
+{
+  "name": "quantum-medical-docs",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install:all": "cd Frontend && npm install && cd ../Backend && npm install",
+    "build": "cd Frontend && npm run build",
+    "start": "cd Backend && node index.js",
+    "dev": "concurrently \"cd Backend && npm run dev\" \"cd Frontend && npm run dev\""
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

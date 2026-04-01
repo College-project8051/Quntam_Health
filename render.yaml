@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: quantum-medical-docs
+    runtime: node
+    buildCommand: cd Frontend && npm install && npm run build && cd ../Backend && npm install
+    startCommand: cd Backend && node index.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false
+      - key: SMTP_HOST
+        sync: false
+      - key: SMTP_PORT
+        sync: false
+      - key: SMTP_SECURE
+        sync: false
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false
+      - key: SMTP_FROM
+        sync: false
