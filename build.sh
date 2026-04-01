@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 set -e
 
-echo "==> Installing Frontend dependencies..."
+echo "==> Installing Frontend dependencies (including devDependencies for build)..."
 cd Frontend
-npm install
+npm install --include=dev
 
 echo "==> Building Frontend..."
 npm run build
